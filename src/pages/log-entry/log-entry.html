@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Description
+      Log Weight
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -12,16 +12,13 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-list>
-      <ion-item>
-        <h2>{{character.name}}</h2>
-        <p>{{character.quote}}</p>
-      </ion-item>
-      <ion-item *ngFor="let item of character['items']">
-        {{item.title}}
-        <ion-note item-right>
-          {{item.note}}
-        </ion-note>
-      </ion-item>
-  </ion-list>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">Weight</ion-label>
+    <ion-input type="number" placeholder="Weight"></ion-input>
+  </ion-item>
+  <button ion-button>Log Weight</button>
 </ion-content>

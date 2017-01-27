@@ -14,7 +14,7 @@ export class HelloIonicPage {
   }
 
   openModal(characterNum) {
-    let modal = this.modalCtrl.create(ModalContentPage, characterNum);
+    let modal = this.modalCtrl.create(ModalContentPage);
     modal.present();
   }
 }
