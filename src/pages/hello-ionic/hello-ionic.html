@@ -18,6 +18,7 @@
   <p>
     Follow along on the tutorial section of the Ionic docs!
   </p>
+  <img [src]="base64Image" *ngIf="base64Image" />
   <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
   </p>
@@ -26,7 +27,7 @@
     <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
     <ion-fab-list side="top">
       <button ion-fab color="primary" (click)="openModal()"><ion-icon name="stats"></ion-icon></button>
-      <button ion-fab color="secondary"><ion-icon name="camera"></ion-icon></button>
+      <button ion-fab color="secondary" (click)="takePicture()"><ion-icon name="camera"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
 </ion-content>
